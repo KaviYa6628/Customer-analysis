@@ -29,15 +29,34 @@ Make sure you have access to the dataset. This code assumes you have the dataset
 ## Model Architecture
 This project uses a deep learning-based Artificial Neural Network (ANN) to classify customer loyalty based on historical data. The model is trained to understand patterns that indicate whether a customer is likely to remain loyal or leave the service.
 Type: Feedforward Neural Network
-## Layers: Input layer → Hidden Layers (2-3) → Output layer
-## Hidden Layers: ReLU
-## Output Layer: Softmax or Sigmoid (for binary classification)
-## Loss Function: Binary Crossentropy
-## Optimizer: Adam
-## Evaluation Metric: Accuracy, Precision, Recall
+Layers: Input layer → Hidden Layers (2-3) → Output layer
+Hidden Layers: ReLU
+Output Layer: Softmax or Sigmoid (for binary classification)
+Loss Function: Binary Crossentropy
+Optimizer: Adam
+Evaluation Metric: Accuracy, Precision, Recall
 
 # Acknowledgement
 This project was inspired by the importance of understanding customer behavior and loyalty trends to improve business strategies and customer retention. The work was supported by open-source tools and datasets, and driven by the goal of building accurate and scalable predictive models.
+
+# output details
+The model is tested using a batch of customer data — not just one customer at a time. Each input is a row from the test dataset, and includes multiple customer features like age, tenure, purchase behavior, etc.
+The output of the model is evaluated using a confusion matrix:
+
+[[144   8]
+ [ 39   9]]
+
+144 → Loyal customers correctly predicted as loyal
+
+8 → Loyal customers wrongly predicted as disloyal
+
+39 → Disloyal customers wrongly predicted as loyal
+
+9 → Disloyal customers correctly predicted as disloyal
+
+The model takes many customers' data at once, and for each customer, it looks at their multiple features to make a prediction
+
+
 
 
 
